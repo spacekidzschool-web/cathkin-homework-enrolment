@@ -317,12 +317,12 @@ footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:22px}
       <div class="tick">✓</div>
       <h2>Thank you! <small>Baie dankie!</small></h2>
       <p id="doneMsg">Your form has been received.</p>
-      <p style="color:var(--muted);font-size:.9rem">Questions? WhatsApp 082 539 8814 or email cathkinacademy@gmail.com</p>
+      <p style="color:var(--muted);font-size:.9rem">Questions? WhatsApp 061 742 3004 or email cathkinacademy@gmail.com</p>
     </div>
   </section>
   </form>
 
-  <footer>Cathkin Academy is a division of SpaceKidz (Pty) Ltd · 2 Cathkin Street, Ravenswood · 082 539 8814 · 064 123 5146 · cathkinacademy@gmail.com</footer>
+  <footer>Cathkin Academy is a division of SpaceKidz (Pty) Ltd · 2 Cathkin Street, Ravenswood · 061 742 3004 · 064 123 5146 · cathkinacademy@gmail.com</footer>
 </div>
 
 <template id="childTpl">
@@ -621,7 +621,7 @@ function buildReview(){
 /* ---------- submit ---------- */
 $('#submitBtn').onclick = async () => {
   const btn = $('#submitBtn'); const bn = $('#banner');
-  if (!CONFIG.WEB_APP_URL || CONFIG.WEB_APP_URL.indexOf('PASTE_') === 0) { bn.textContent = 'This form is not fully set up yet. Please contact Cathkin Academy on 082 539 8814.'; bn.style.display='block'; return; }
+  if (!CONFIG.WEB_APP_URL || CONFIG.WEB_APP_URL.indexOf('PASTE_') === 0) { bn.textContent = 'This form is not fully set up yet. Please contact Cathkin Academy on 061 742 3004.'; bn.style.display='block'; return; }
   btn.disabled = true; btn.textContent = 'Submitting… please wait';
   const d = payload();
   const finish = () => {
@@ -638,7 +638,7 @@ $('#submitBtn').onclick = async () => {
     // Apps Script sometimes delivers the submission but the browser blocks the reply.
     if (err instanceof TypeError && navigator.onLine) { finish(); return; }
     btn.disabled = false; btn.textContent = 'Submit / Dien in';
-    bn.textContent = 'Sorry, something went wrong while submitting. Please try again, or WhatsApp us on 082 539 8814.'; bn.style.display = 'block';
+    bn.textContent = 'Sorry, something went wrong while submitting. Please try again, or WhatsApp us on 061 742 3004.'; bn.style.display = 'block';
   }
 };
 
